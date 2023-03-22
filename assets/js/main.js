@@ -88,17 +88,12 @@ const memberTeam = [
 //selezionare l'elemento della DOM e salvarlo in una variabile
 const rowElement = document.querySelector('.row');
 
-//creare un ciclo per ciclare nell'array dei membri 
-for (let i = 0; i < memberTeam.length; i++) {
+//creare una funzione per ciclare nell'array
+function loopInArray(array) {
+    //creare un ciclo per ciclare nell'array dei membri 
+for (let i = 0; i < array.length; i++) {
     //salvare i vari membri in una costante e loggarli in console
-    const member = memberTeam[i];
-    
-    //opzione 1 per stampa in console
-    // console.log(member);
-    // console.log(member.name, member.job, member.img);
-    // console.log(member.name);
-    // console.log(member.job);
-    // console.log(member.img);
+    const member = array[i];
     
     //opzione 2 per stampa in console
     for (const key in member) {
@@ -120,3 +115,6 @@ for (let i = 0; i < memberTeam.length; i++) {
     //stampare le varie caratteristiche degli object (membri) nell'elemento selezionato
     rowElement.innerHTML += markup;
 }
+}
+
+loopInArray(memberTeam)
