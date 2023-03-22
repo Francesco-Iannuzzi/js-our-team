@@ -91,30 +91,30 @@ const rowElement = document.querySelector('.row');
 //creare una funzione per ciclare nell'array
 function loopInArray(array) {
     //creare un ciclo per ciclare nell'array dei membri 
-for (let i = 0; i < array.length; i++) {
-    //salvare i vari membri in una costante e loggarli in console
-    const member = array[i];
-    
-    //opzione 2 per stampa in console
-    for (const key in member) {
-        console.log(member[key]);
-    }
+    for (let i = 0; i < array.length; i++) {
+        //salvare i vari membri in una costante e loggarli in console
+        const member = array[i];
 
-    const markup = 
-    `<div class="col-4 my-5 d-flex justify-content-evenly">
-        <div class="card" style="width: 18rem;">
-            <img src="./assets/img/${member.img}" class="card-img-top img-fluid" alt="..."></img>
-            <div class="card-body">
-                <h5 class="card-title">${member.name}</h5>
-                <h6 class="card-text">${member.job}</h6>
+        //opzione 2 per stampa in console
+        for (const key in member) {
+            console.log(member[key]);
+        }
+
+        const markup =
+            `<div class="col-4 my-5 d-flex justify-content-evenly">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/${member.img}" class="card-img-top img-fluid" alt="..."></img>
+                    <div class="card-body">
+                        <h5 class="card-title">${member.name}</h5>
+                        <h6 class="card-text">${member.job}</h6>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    `
+            `
 
-    //stampare le varie caratteristiche degli object (membri) nell'elemento selezionato
-    rowElement.innerHTML += markup;
-}
+        //stampare le varie caratteristiche degli object (membri) nell'elemento selezionato
+        rowElement.innerHTML += markup;
+    }
 }
 
 loopInArray(memberTeam)
