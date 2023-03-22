@@ -98,5 +98,5 @@ for (let i = 0; i < memberTeam.length; i++) {
     console.log(member.img);
 
     //stampare le varie caratteristiche degli object (membri) nell'elemento selezionato
-    containerElement.innerHTML += `${member.name} / ${member.job} / ${member.img}<br></br>`;
+    containerElement.innerHTML += `Name: ${member.name} <br> Job: ${member.job} <br> <img src="./assets/img/${member.img}" class="mb-5"></img> <br>`;
 }
