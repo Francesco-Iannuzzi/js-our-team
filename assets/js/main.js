@@ -81,12 +81,22 @@ const memberTeam = [
         job: 'Graphic Designer',
         img: 'barbara-ramos-graphic-designer.jpg'
     }
-] 
+]
+
+//creare un elemento in DOM in cui stampare a schermo le caratteristiche dei membri del team (gli object dell'array)
+//selezionare l'elemento della DOM e salvarlo in una variabile
+const containerElement = document.querySelector('.container');
 
 //creare un ciclo per ciclare nell'array dei membri 
 for (let i = 0; i < memberTeam.length; i++) {
     //salvare i vari membri in una costante e loggarli in console
     const member = memberTeam[i];
+    console.log(member);
     console.log(member.name, member.job, member.img);
-    
+    console.log(member.name);
+    console.log(member.job);
+    console.log(member.img);
+
+    //stampare le varie caratteristiche degli object (membri) nell'elemento selezionato
+    containerElement.innerHTML += `${member.name} / ${member.job} / ${member.img}<br></br>`;
 }
