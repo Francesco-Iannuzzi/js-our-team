@@ -98,9 +98,9 @@ for (let i = 0; i < memberTeam.length; i++) {
     console.log(member.img);
 
     const markup = 
-    `<div class="col-4 my-5">
+    `<div class="col-4 my-5 d-flex justify-content-evenly">
         <div class="card" style="width: 18rem;">
-            <img src="./assets/img/${member.img}" class="card-img-top" alt="..."></img>
+            <img src="./assets/img/${member.img}" class="card-img-top img-fluid" alt="..."></img>
             <div class="card-body">
                 <h5 class="card-title">${member.name}</h5>
                 <h6 class="card-text">${member.job}</h6>
