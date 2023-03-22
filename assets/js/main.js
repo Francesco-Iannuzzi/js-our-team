@@ -21,13 +21,13 @@ MILESTONE 1:
 Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto. ✓
 
 MILESTONE 2:
-Stampare le stesse informazioni su DOM sottoforma di stringhe. 
+Stampare le stesse informazioni su DOM sottoforma di stringhe. ✓
 
 BONUS 1:
-Trasformare la stringa foto in una immagine effettiva
+Trasformare la stringa foto in una immagine effettiva. ✓
 
 BONUS 2:
-Organizzare i singoli membri in card/schede
+Organizzare i singoli membri in card/schede. ✓
 
 Consigli del giorno:
 - Ragioniamo come sempre a step.
@@ -85,18 +85,30 @@ const memberTeam = [
 
 //creare un elemento in DOM in cui stampare a schermo le caratteristiche dei membri del team (gli object dell'array)
 //selezionare l'elemento della DOM e salvarlo in una variabile
-const containerElement = document.querySelector('.container');
+const rowElement = document.querySelector('.row');
 
 //creare un ciclo per ciclare nell'array dei membri 
 for (let i = 0; i < memberTeam.length; i++) {
     //salvare i vari membri in una costante e loggarli in console
     const member = memberTeam[i];
     console.log(member);
-    console.log(member.name, member.job, member.img);
+    //console.log(member.name, member.job, member.img);
     console.log(member.name);
     console.log(member.job);
     console.log(member.img);
 
+    const markup = 
+    `<div class="col-4 my-5">
+        <div class="card" style="width: 18rem;">
+            <img src="./assets/img/${member.img}" class="card-img-top" alt="..."></img>
+            <div class="card-body">
+                <h5 class="card-title">${member.name}</h5>
+                <h6 class="card-text">${member.job}</h6>
+            </div>
+        </div>
+    </div>
+    `
+
     //stampare le varie caratteristiche degli object (membri) nell'elemento selezionato
-    containerElement.innerHTML += `Name: ${member.name} <br> Job: ${member.job} <br> <img src="./assets/img/${member.img}" class="mb-5"></img> <br>`;
+    rowElement.innerHTML += markup;
 }
