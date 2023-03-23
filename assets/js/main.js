@@ -88,8 +88,8 @@ const memberTeam = [
 //selezionare l'elemento della DOM e salvarlo in una variabile
 const rowElement = document.querySelector('.row');
 
-//creare una funzione per ciclare nell'array
-function loopInArray(array) {
+//creare una funzione per ciclare nell'array e stampare delle card con i suoi dati
+function generateCardArray(array) {
     //creare un ciclo per ciclare nell'array dei membri 
     for (let i = 0; i < array.length; i++) {
         //salvare i vari membri in una costante e loggarli in console
@@ -117,4 +117,4 @@ function loopInArray(array) {
     }
 }
 
-loopInArray(memberTeam)
+generateCardArray(memberTeam)
